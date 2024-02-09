@@ -1,0 +1,166 @@
+body {
+  margin: 3rem 5% 3rem 5%;
+  background-color: #edefee;
+}
+
+h1 {
+  background: #f4e5d6;
+  color: black;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 1.2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+header > img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s;
+  animation: turn 1.5s linear;
+}
+
+header > img:hover {
+  width: 55%;
+}
+
+@keyframes turn {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+nav ul {
+    margin: 30px 0px;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+ul a {
+  text-decoration: none;
+  color: #495e57;
+}
+
+ul a > :hover {
+  color: white;
+  background-color: #495e57;
+}
+
+ul a > :active {
+  color: white;
+  background-color: rgb(1, 45, 1);
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1.2rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+section {
+  display: flex;
+  animation: disappear 4s;
+  gap: 100px;
+}
+
+
+
+article {
+  flex: 1;
+  padding: 1rem;
+}
+
+section:nth-child(1) article {
+  border: 1px solid black;
+  border-radius: 30px;
+  background: #f4e5d6;
+  /* margin: 20px; */
+  background-image: url(https://www.bmj.com/sites/default/files/attachments/resources/2018/06/fffhorizontal.jpg);
+  background-size: cover;
+  background-position: center;
+  color: black;
+  padding: 0px 10rem;
+  margin-bottom: 1.5rem;
+}
+section:nth-child(2) article {
+  background-color: #f4e5d6;
+  border: 1px solid #f4b576;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    section {
+      display: block;
+      animation: disappear 4s;
+      gap: 100px;
+    }
+  
+    section:nth-child(1) article {
+      margin: 20px 0px;
+      padding: 20px;
+    }
+
+    header > img{
+        width: 100%;
+    }
+  }
+
+article > img {
+  width: 200px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  transition: 1s;
+}
+
+article > img:hover {
+  width: 350px;
+  height: 170px;
+}
+
+@keyframes disappear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  display: flex;
+}
+
+footer img {
+  width: 5rem;
+}
+
+footer div {
+  flex: 1;
+}
+
+footer div:nth-child(2){
+    text-align: right;
+    border-top: 2px solid #495E57;
+}
